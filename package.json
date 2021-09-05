@@ -1,0 +1,31 @@
+{
+  "name": "travel-bug",
+  "version": "1.0.0",
+  "description": "Joining employers to people looking for short-term work, allowing people the opportunity to travel more.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nholder06/travel-bug.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nholder06/travel-bug/issues"
+  },
+  "homepage": "https://github.com/nholder06/travel-bug#readme",
+  "dependencies": {
+    "http-status": "^1.5.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-cors": "^0.0.16",
+    "koa-logger": "^3.2.1",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "nodemon": "^2.0.12"
+  }
+}
