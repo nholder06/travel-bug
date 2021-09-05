@@ -15,9 +15,25 @@ app.use(BodyParser());
 app.use(Logger());
 app.use(cors());
 
+const router = new Router();
+
+router.get("/book", async (ctx, next) => {
+  const books = [
+    "Harry Potter",
+    "Where the CrawDads Sing",
+    "Start With Why",
+    "Dare to Lead"
+  ];
+  ctx.status = HttpStatus.OK;
+  ctx.body = books;
+  await next();
+});
+
+app.use(router.routes()).use(router.allowedMethods());
+
 app.listen(PORT, function() {
   console.log(
-    "==> 🌎  Listening on port %s. Visit http://localhost:%s/",
+    "==> 🌎  Woohoo! Listening on port %s. Visit http://localhost:%s/",
     PORT,
     PORT
   );
